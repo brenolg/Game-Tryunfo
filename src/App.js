@@ -15,17 +15,63 @@ class App extends React.Component {
       cardRare: '',
       cardTrunfo: '',
       hasTrunfo: '',
-      isSaveButtonDisabled: false,
       onSaveButtonClick: false,
+      isSaveButtonDisabled: true,
     };
   }
 
-  onInputChange = (e) => {
-    const { name, value, type } = e.target;
-    let cardValue = value;
-    if (type === 'checkbox') cardValue = e.target.checked;
+  onInputChange = ({ target }) => {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState(
+      {
+        [name]: value,
+      },
+      this.readySubmit,
+    );
+  };
 
-    this.setState({ [name]: cardValue });
+  readySubmit = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+    } = this.state;
+
+    const maxAttrSum = 210;
+    const attr1 = parseInt(cardAttr1, 10);
+    const attr2 = parseInt(cardAttr2, 10);
+    const attr3 = parseInt(cardAttr3, 10);
+
+    console.log(attr1);
+
+    const checkMax = (attr1 + attr2 + attr3) <= maxAttrSum;
+
+    const allAtr = [attr1, attr2, attr3];
+
+    const max90 = 90;
+    const maxAttr = allAtr.every((attr) => attr >= 0 && attr <= max90);
+
+    const checkName = cardName.length > 0;
+    const checkDes = cardDescription.length > 0;
+    const checkImage = cardImage.length > 0;
+    const checkRare = cardRare.length > 0;
+
+    if (
+      checkMax === true
+      && maxAttr === true
+      && checkName === true
+      && checkDes === true
+      && checkImage === true
+      && checkRare === true) {
+      this.setState({ isSaveButtonDisabled: false });
+    } else {
+      this.setState({ isSaveButtonDisabled: true });
+    }
   };
 
   render() {
