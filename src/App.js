@@ -1,6 +1,6 @@
 import React from 'react';
-import Form from './components/Form';
 import Card from './components/Card';
+import Form from './components/Form';
 
 class App extends React.Component {
   constructor() {
@@ -14,7 +14,7 @@ class App extends React.Component {
       cardImage: '',
       cardRare: '',
       cardTrunfo: false,
-      hasTrunfo: '',
+      hasTrunfo: false,
       isSaveButtonDisabled: true,
       deck: [],
     };
@@ -83,6 +83,7 @@ class App extends React.Component {
       cardAttr2,
       cardAttr3,
       cardTrunfo,
+      hasTrunfo,
     } = this.state;
 
     const card = {
@@ -94,13 +95,19 @@ class App extends React.Component {
       cardAttr2,
       cardAttr3,
       cardTrunfo,
+      hasTrunfo,
     };
+
+    if (cardTrunfo) {
+      this.setState({ hasTrunfo: true });
+    }
 
     this.setState(
       (prev) => ({
         deck: [...prev.deck, card],
       }),
       this.clearForm,
+      this.checkTrunfo,
     );
   };
 
@@ -114,7 +121,6 @@ class App extends React.Component {
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
-      hasTrunfo: '',
       isSaveButtonDisabled: true,
     });
   };
@@ -162,6 +168,7 @@ class App extends React.Component {
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
+          hasTrunfo={ this.checkTrunfo }
         />
       </div>
     );
