@@ -13,7 +13,7 @@ class App extends React.Component {
       cardAttr3: '',
       cardImage: '',
       cardRare: '',
-      cardTrunfo: '',
+      cardTrunfo: false,
       hasTrunfo: '',
       isSaveButtonDisabled: true,
       deck: [],
@@ -82,6 +82,7 @@ class App extends React.Component {
       cardAttr1,
       cardAttr2,
       cardAttr3,
+      cardTrunfo,
     } = this.state;
 
     const card = {
@@ -92,6 +93,7 @@ class App extends React.Component {
       cardAttr1,
       cardAttr2,
       cardAttr3,
+      cardTrunfo,
     };
 
     this.setState(
@@ -111,7 +113,7 @@ class App extends React.Component {
       cardAttr3: '0',
       cardImage: '',
       cardRare: 'normal',
-      cardTrunfo: '',
+      cardTrunfo: false,
       hasTrunfo: '',
       isSaveButtonDisabled: true,
     });
