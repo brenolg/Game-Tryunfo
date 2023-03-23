@@ -1,21 +1,11 @@
 # Projeto Tryunfo
 Um jogo no estilo Super Trunfo, em que será possível criar novas cartas e listar as cartas já existentes no baralho. Tudo isso de forma dinâmica, usando formulários e o estado da aplicação.
 
-## Funcionalidades
-Criar uma carta personalizada com nome, imagem e atributos
-Salvar a carta criada no banco de dados
-Visualizar as cartas salvas
-Jogar contra o computador usando as cartas salvas
-Comparar os atributos das cartas e ver quem vence cada rodada
-Demonstração da aplicação
-
 ## Tecnologias utilizadas
-HTML
-CSS
-JavaScript
-React
-Redux
-MongoDB
+* HTML
+* CSS
+* JavaScript
+* React
 
 ## Instalação do projeto localmente
 Para instalar o projeto localmente, siga os seguintes passos:
