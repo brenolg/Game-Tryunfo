@@ -3,7 +3,6 @@ Um jogo no estilo Super Trunfo, em que será possível criar novas cartas e list
 
 ## Tecnologias utilizadas
 * HTML
-* CSS
 * JavaScript
 * React
 
