@@ -1,10 +1,21 @@
 # Projeto Tryunfo
 Um jogo no estilo Super Trunfo, em que será possível criar novas cartas e listar as cartas já existentes no baralho. Tudo isso de forma dinâmica, usando formulários e o estado da aplicação.
 
+## Funcionalidades
+
+* Criar um baralho com o tema livre;
+
+* Adicionar e remover uma carta do baralho;
+
+* Visualizar todas as cartas que foram adicionadas ao baralho;
+
 ## Tecnologias utilizadas
-* HTML
-* JavaScript
+
 * React
+* Props
+* Componentes
+* HTML
+* CSS
 
 ## Instalação do projeto localmente
 Para instalar o projeto localmente, siga os seguintes passos:
@@ -12,11 +23,10 @@ Para instalar o projeto localmente, siga os seguintes passos:
 Clone o repositório do GitHub
 
 ```javascript
-  git clone git@github.com:brenolg/tryunfo.git
+  git clone git@github.com:brenolg/Game-Tryunfo.git
 ```
 
 Instale as dependências
-
 
 ```javascript
    npm install
