@@ -23,7 +23,7 @@ Para instalar o projeto localmente, siga os seguintes passos:
 Clone o repositório do GitHub
 
 ```javascript
-  git clone git@github.com:brenolg/Game-Tryunfo.git
+  git clone git@github.com:brenolg/Game-Tryunfo-REACT.git
 ```
 
 Instale as dependências
